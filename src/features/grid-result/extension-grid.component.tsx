@@ -1,5 +1,4 @@
-import React, { useState }  from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
 import {ExtensionData} from "../../models/dataExt";
 import { Grid, GridColumn as Column, GridSortChangeEvent } from "@progress/kendo-react-grid";
 import { orderBy, SortDescriptor  } from "@progress/kendo-data-query";
