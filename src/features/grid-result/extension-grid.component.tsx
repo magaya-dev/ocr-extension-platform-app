@@ -11,7 +11,7 @@ const ExstensionGrid = () => {
         { field: "networkId", dir: "asc" },
         { field: "extensionName", dir: "asc" }
       ]);
-      const [allowUnsort, setAllowUnsort] = React.useState<boolean>(true);
+      const [allowUnsort] = React.useState<boolean>(true);
       const sortChange = (event: GridSortChangeEvent) => {
         setData(getProducts(event.sort));
         setSort(event.sort);
