@@ -33,7 +33,9 @@ const ExstensionGrid = () => {
             <div className="col-12 result-content">
                 <Grid
                 style={{
-                    height: "400px",
+                    height: "450px",
+                    fontFamily: "Roboto",
+                    fontSize: "16px"
                 }}
                 data={data}
                 sortable={{

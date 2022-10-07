@@ -1,0 +1,110 @@
+[
+	{
+		"networkId": "36644",
+		"companyName": "Jose Pineda",
+		"extensionName": "Custom Compliance",
+		"version": "1.2.3",
+		"mgyVersion": null,
+		"latest": true,
+		"status": 1,
+		"createdDate": "2022-08-08T18:08:18.1178207+00:00",
+		"updatedDate": "2022-08-08T18:08:18.1178928+00:00",
+		"mgyGateWay": true
+	},
+	{
+		"networkId": "37190",
+		"companyName": "magaya",
+		"extensionName": "magaya-catapult",
+		"version": "3.2.4",
+		"mgyVersion": null,
+		"latest": false,
+		"status": 1,
+		"createdDate": "2022-09-20T05:04:09.6386694+00:00",
+		"updatedDate": "2022-09-20T05:04:09.6386712+00:00",
+		"mgyGateWay": true
+	},
+	{
+		"networkId": "37556",
+		"companyName": "HUM",
+		"extensionName": "magaya-container",
+		"version": "5.1.2",
+		"mgyVersion": null,
+		"latest": false,
+		"status": 1,
+		"createdDate": "2022-09-08T16:31:33.3266296+00:00",
+		"updatedDate": "2022-09-08T16:31:33.3266312+00:00",
+		"mgyGateWay": false
+	},
+	{
+		"networkId": "37556",
+		"companyName": "Globestar",
+		"extensionName": "magaya-shipping",
+		"version": null,
+		"mgyVersion": null,
+		"latest": false,
+		"status": 0,
+		"createdDate": "2022-09-07T22:00:17.2423993+00:00",
+		"updatedDate": "2022-09-07T22:00:17.242401+00:00",
+		"mgyGateWay": false
+	},
+	{
+		"networkId": "37590",
+		"companyName": "Lop",
+		"extensionName": "magaya-shipping",
+		"version": "2.1.1",
+		"mgyVersion": null,
+		"latest": false,
+		"status": 1,
+		"createdDate": "2022-09-08T14:02:02.1545315+00:00",
+		"updatedDate": "2022-09-08T14:02:02.1545327+00:00",
+		"mgyGateWay": false
+	},
+	{
+		"networkId": "36644",
+		"companyName": "Gilscot-Guidroz",
+		"extensionName": "Rate Management",
+		"version": "2.3.6",
+		"mgyVersion": null,
+		"latest": false,
+		"status": 1,
+		"createdDate": "2022-08-08T18:01:40.7420268+00:00",
+		"updatedDate": "2022-08-08T18:01:40.7420334+00:00",
+		"mgyGateWay": false
+	},
+	{
+		"networkId": "36760",
+		"companyName": "Ayelin-Company",
+		"extensionName": "Rate Management",
+		"version": "5.6.9",
+		"mgyVersion": null,
+		"latest": false,
+		"status": 0,
+		"createdDate": "2022-07-11T17:41:54.5758656+00:00",
+		"updatedDate": "2022-07-11T17:41:54.5758671+00:00",
+		"mgyGateWay": true
+	},
+	{
+		"networkId": "37190",
+		"companyName": "magaya",
+		"extensionName": "Rate Management",
+		"version": "5.4.7",
+		"mgyVersion": null,
+		"latest": false,
+		"status": 1,
+		"createdDate": "2022-08-24T07:46:46.1723778+00:00",
+		"updatedDate": "2022-08-24T07:46:46.172379+00:00",
+		"mgyGateWay": true
+	},
+	{
+		"networkId": "37280",
+		"companyName": "Gilscot-Guidroz",
+		"extensionName": "Rate Management",
+		"version": null,
+		"mgyVersion": null,
+		"latest": false,
+		"status": 1,
+		"createdDate": "2022-07-11T16:13:41.8573692+00:00",
+		"updatedDate": "2022-07-11T16:13:41.8574511+00:00",
+		"mgyGateWay": true
+	}
+]
