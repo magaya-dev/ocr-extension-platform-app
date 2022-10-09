@@ -2,7 +2,7 @@
   "scanSettings": {
     "configMode": "AUTO",
     "configExternalURL": "",
-    "projectToken": "",
+    "projectToken": "8322bb4c811a40cda86b292ab5d08211b96639ae194446c0953db8a406b2353a",
     "baseBranches": []
   },
   "checkRunSettings": {
