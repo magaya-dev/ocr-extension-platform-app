@@ -40,6 +40,8 @@
   vertical-align: middle;
   font-size: 16px!important;
   color: #0C2556!important;
+  height: 48px;
+  background-color: #ffffff;
 }
 
 .k-splitbar {
@@ -67,6 +69,10 @@
 .k-calendar.k-calendar-infinite .k-button.k-next-view,
 .k-calendar.k-calendar-infinite .k-button.k-prev-view {
   display: none;
+}
+
+.k-master-row {
+  height: 56px;
 }
 
 .k-master-row .k-grid-content-sticky,

@@ -1,11 +1,19 @@
 import React from "react";
 import {ExtensionData} from "../../models/dataExt";
-import { Grid, GridColumn as Column, GridDataStateChangeEvent } from "@progress/kendo-react-grid";
-import { DataResult, process, State } from "@progress/kendo-data-query";
-import { SortDescriptor  } from "@progress/kendo-data-query";
+import { Grid,
+  GridColumn as Column,
+  GridDataStateChangeEvent,
+  GridFilterCellProps } from "@progress/kendo-react-grid";
+import { DataResult,
+  process,
+  State,
+  SortDescriptor } from "@progress/kendo-data-query";
 import products from "../../products.json";
-import { BoolToTextCell } from "../../helper/GridCell";
-import { ColumnMenu  } from "../../helper/columnMenu";
+import { BoolToTextCell } from "../../helper/kendo-components/GridCell";
+import { ColumnMenu  } from "../../helper/kendo-components/columnMenu";
+import { DropdownFilterCell } from "../../helper/kendo-components/DropdownFilterCell";
+
+
 
 
 const createDataState = (dataState: State) => {
@@ -23,7 +31,7 @@ const ExstensionGrid = () => {
   ]);
 
   const initialState = createDataState({
-    take: 5,
+    take: 20,
     skip: 0,
     sort: sort,
   });
@@ -38,19 +46,35 @@ const ExstensionGrid = () => {
     setResult(updatedState.result);
     setDataState(updatedState.dataState);
   };
+
+  const extensions: string[] = Array.from(
+    new Set(
+      products.map((p: ExtensionData) =>
+        p.extensionName ?? p.extensionName
+      )
+    )
+  );
+  
+  const CategoryFilterCell: any = (props: GridFilterCellProps) => (
+    <DropdownFilterCell
+      {...props}
+      data={extensions}
+      defaultItem={"Show All"}
+    />
+  );
   
     return (
       <div>
         <div className="row">
             <div className="col-12">
-                <h1>Entension Dashboard</h1>
+                <h1>Entensions Dashboard</h1>
             </div>
         </div>
         <div className='row'>
             <div className="col-12 result-content">
                 <Grid
                 style={{
-                    height: "450px",
+                    height: "800px",
                     fontFamily: "Roboto",
                     fontSize: "16px"
                 }}
@@ -59,10 +83,11 @@ const ExstensionGrid = () => {
                 onDataStateChange={dataStateChange}
                 sortable={true}
                 pageable={true}
-                pageSize={5}
+                pageSize={20}
+                filterable={true}
                 >
-                    <Column field="networkId" title="NID" filter={"numeric"} columnMenu={ColumnMenu} />
-                    <Column field="extensionName" title="Extension" width="350px" filter={"text"} columnMenu={ColumnMenu} />
+                    <Column field="networkId" title="NID" filter={"text"} columnMenu={ColumnMenu} />
+                    <Column field="extensionName" title="Extension" width="350px" filterCell={CategoryFilterCell} columnMenu={ColumnMenu} />
                     <Column field="version" title="Version" filter={"text"} columnMenu={ColumnMenu} />
                     <Column field="latest" title="Latest" cell={BoolToTextCell} filter={"boolean"} columnMenu={ColumnMenu}/>
                     <Column field="status" title="Status" filter={"text"} columnMenu={ColumnMenu} />
@@ -72,6 +97,6 @@ const ExstensionGrid = () => {
         </div>
       </div>
     );
-  };
+};
   
   export default ExstensionGrid;
