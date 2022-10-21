@@ -104,7 +104,7 @@ const ExstensionGrid = () => {
       {...props}
       //class = {statuList.ie[props.field] ? 'color-if-true' : ''}
       data={statuList}
-      defaultItem={"All"}
+      defaultItem={"(All)"}
     />
   );
 
