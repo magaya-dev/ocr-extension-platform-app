@@ -7,7 +7,7 @@ import { Grid,
   GridFilterCellProps } from "@progress/kendo-react-grid";
 
 import { DataResult,
-  process,
+  process as processKendo,
   State,
   SortDescriptor } from "@progress/kendo-data-query";
 
@@ -32,7 +32,7 @@ const ExstensionGrid = () => {
         
 				console.log(data);
         setExtensions(data);
-        setResult(process(data, { skip: 0, take: 20 }));
+        setResult(processKendo(data, { skip: 0, take: 20 }));
 			})
 			.catch((err) => {
         console.log(err);
@@ -44,7 +44,7 @@ const ExstensionGrid = () => {
   
   const createDataState = (dataState: State) => {
     return {
-      result: process<ExtensionData>(exts.slice(0), dataState),
+      result: processKendo<ExtensionData>(exts.slice(0), dataState),
       dataState: dataState,
     };
   };
