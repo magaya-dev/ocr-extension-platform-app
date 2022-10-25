@@ -28,7 +28,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-        "no-console": "error",
+        //"no-console": "error",
         "import/first": "error",
         "react/prop-types": "off"
     }
