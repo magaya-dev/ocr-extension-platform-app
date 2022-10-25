@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL : "http://localhost:7071/api/",//"https://extensionplatformcsbeta.azurewebsites.net/api/",
+  baseURL : "http://localhost:7071/api/",
   headers: {
     "Accept":"application/json, text/plain, /",
     "Content-Type": "multipart/form-data"

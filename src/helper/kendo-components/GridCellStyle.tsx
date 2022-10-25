@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const StyleToTextCell = props => {
     return (
         <td>
-            <span className={props.dataItem[props.field] == 'Online' ? 'color-if-true' : ''}>{(props.dataItem[props.field])}</span>
+            <span className={props.dataItem[props.field] === 'Online' ? 'color-if-true' : ''}>{(props.dataItem[props.field])}</span>
         </td>
     );
 };
