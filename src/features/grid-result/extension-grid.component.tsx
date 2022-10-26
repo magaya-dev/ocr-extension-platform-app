@@ -112,8 +112,6 @@ const ExstensionGrid = () => {
         <div className="row">
             <div className="col-12">
                 <h1>Entensions Dashboard</h1>
-                <span>{process.env.REACT_APP_API_URL}</span>
-                <p>finish</p>
             </div>
         </div>
         <div className='row'>
