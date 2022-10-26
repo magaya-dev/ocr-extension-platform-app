@@ -6,5 +6,5 @@ export default axios.create({
     "Accept":"application/json, text/plain, /",
     "Content-Type": "multipart/form-data"
   },
-  params: {"code": "oGi9K5wyWiF58BWs3SEh-wZ4KRt7lSXDj3o_CEo6-Zc0AzFuMlLTDg=="}
+  params: {"code": process.env.REACT_APP_API_CODE}
 });
