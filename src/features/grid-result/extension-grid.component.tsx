@@ -12,7 +12,7 @@ import { DataResult,
   SortDescriptor } from "@progress/kendo-data-query";
 
 import { BoolToTextCell } from "../../helper/kendo-components/GridCell";
-import { StyleToTextCell } from "../../helper/kendo-components/GridCellStyle";
+import { StyleToTextCell, StyleToGateWayCell } from "../../helper/kendo-components/GridCellStyle";
 import { ColumnMenu  } from "../../helper/kendo-components/columnMenu";
 import { DropdownFilterCell } from "../../helper/kendo-components/DropdownFilterCell";
 
@@ -23,6 +23,7 @@ let statusValues: any[];
 let statusMapping: Map<number, string>;
 
 const ExstensionGrid = () => {
+
   const [exts, setExtensions] = React.useState<ExtensionData[]>([]);
  
   //const initialDataState: State = { skip: 0, take: 20 };
@@ -107,6 +108,22 @@ const ExstensionGrid = () => {
     />
   );
 
+  // GateWay filter
+  const gatewayColumn: string[] = Array.from(
+    new Set(
+      exts.map((p: ExtensionData) =>
+        p.gateWay ?? p.gateWay
+      )
+    )
+  );
+  const GateWayFilterCell: any = (props: GridFilterCellProps) => (
+    <DropdownFilterCell
+      {...props}
+      data={gatewayColumn}
+      defaultItem={"All"}
+    />
+  );
+
     return (
       <div>
         <div className="row">
@@ -136,7 +153,7 @@ const ExstensionGrid = () => {
                     <Column field="version" title="Version" filter={"text"} columnMenu={ColumnMenu} />
                     <Column field="latest" title="Latest" cell={BoolToTextCell} filter={"boolean"} columnMenu={ColumnMenu} />
                     <Column field="status" title="Status" filterCell={statusFilterCell} cell={StyleToTextCell} columnMenu={ColumnMenu} className=""/>
-                    <Column field="mgyGateWay" title="Gateway" cell={BoolToTextCell} filter={"boolean"} columnMenu={ColumnMenu} />
+                    <Column field="gateWay" title="Gateway" filterCell={GateWayFilterCell} cell={StyleToGateWayCell} columnMenu={ColumnMenu} />
                 </Grid>
             </div>
         </div>

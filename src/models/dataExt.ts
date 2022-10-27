@@ -7,6 +7,8 @@ export interface ExtensionData {
     latest: boolean;
     status: number; // Off-line, Online
     mgyGateWay: boolean;
+    mgyGateWayStatus: boolean;
+    gateWay: string;
   }
 
   export enum ExtStatusEnum {

@@ -9,6 +9,14 @@ export const StyleToTextCell = props => {
     );
 };
 
+export const StyleToGateWayCell = props => {
+    return (
+        <td>
+            <span className={props.dataItem[props.field] === 'YES (ON)' || props.dataItem[props.field] === 'YES (OFF)' ? 'color-if-true' : ''}>{(props.dataItem[props.field])}</span>
+        </td>
+    );
+};
+
 StyleToTextCell.propTypes = {
     field: PropTypes.string,
     dataItem: PropTypes.arrayOf(PropTypes.string)

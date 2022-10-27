@@ -10,8 +10,6 @@ export const ColumnMenu = (props: GridColumnMenuProps) => {
   return (
     <div>
       <GridColumnMenuSort {...props} />
-      <GridColumnMenuFilter {...props} />
-      <GridColumnMenuGroup {...props} />
     </div>
   );
 };
