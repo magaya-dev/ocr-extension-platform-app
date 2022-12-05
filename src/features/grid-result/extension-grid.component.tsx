@@ -120,7 +120,7 @@ const ExstensionGrid = () => {
     <DropdownFilterCell
       {...props}
       data={gatewayColumn}
-      defaultItem={"All"}
+      defaultItem={"(All)"}
     />
   );
 

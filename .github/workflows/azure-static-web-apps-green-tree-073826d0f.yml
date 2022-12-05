@@ -17,8 +17,8 @@ jobs:
     env:
       CI: ''
       KENDO_UI_LICENSE: ${{ secrets.KENDO_UI_LICENSE }}
-      REACT_APP_API_URL: 'https://extensionplatformcsbeta.azurewebsites.net/api/'
-      REACT_APP_API_CODE: 'oGi9K5wyWiF58BWs3SEh-wZ4KRt7lSXDj3o_CEo6-Zc0AzFuMlLTDg=='
+      REACT_APP_API_URL: 'https://extensionplatformbetav4.azurewebsites.net/api/'
+      REACT_APP_API_CODE: 'eSir6SBydta__0L9UyJIutbXUnKmJ2xvEG5IVoxNl5IHAzFuta_Pcg=='
     steps:
       - uses: actions/checkout@v2
         with:
